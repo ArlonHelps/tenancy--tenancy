@@ -20,7 +20,7 @@ interface ResolvesAffects
 {
     public function addAffect($affect);
 
-    public function handle($event, callable $fire = null);
+    public function handle($event, ?callable $fire = null);
 
     public function getAffects(): array;
 

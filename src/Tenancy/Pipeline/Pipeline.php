@@ -22,7 +22,7 @@ class Pipeline
 {
     protected $steps;
 
-    public function __construct(Steps $steps = null)
+    public function __construct(?Steps $steps = null)
     {
         $this->steps = $steps ?? new Steps();
     }
@@ -44,7 +44,7 @@ class Pipeline
         return $this;
     }
 
-    public function handle($event, callable $fire = null)
+    public function handle($event, ?callable $fire = null)
     {
         $steps = $this->steps;
 
